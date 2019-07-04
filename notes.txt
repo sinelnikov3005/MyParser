@@ -32,9 +32,7 @@ git push -u origin master
 git clone $ссылка на GitHub проект$
     # послучить(скачать) себе проект с GitHub
 
-
-
-git push origin master
+git push -u origin master
     # отправить изменения на GitHub
 
 
