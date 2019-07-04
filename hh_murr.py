@@ -25,7 +25,7 @@ def hh_parse(base_url, headers):
             # text1 = div.find('div',
             #                  attrs={'data-qa': 'vacancy-serp__vacancy_responsibility'})
             content = div.find('div',
-                             attrs={'data-qa': 'vacancy-serp__vacancy_requirement'})
+                               attrs={'data-qa': 'vacancy-serp__vacancy_requirement'})
             # content = text1 + ' ' + text2
             jobs.append({
                 'title': title,
@@ -35,10 +35,10 @@ def hh_parse(base_url, headers):
             })
             # print(soup)
             # print(len(divs))
-            # print(title)
-            # print(href)
-            # print(company)
-            print(len(jobs))
+            print(len(jobs), end=') ')
+            print(title)
+            print(company)
+            print(href + '\n\n')
     else:
         print('ERROR')
 
