@@ -4,12 +4,18 @@ from bs4 import BeautifulSoup as bs
 headers = {'accept': '*/*',
            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'}
 
-url_https = 'https://hh.ua/search/vacancy?'
+# Страна, Город, Вакансия
+print('city')
+name_city = input()
+
+url_https = 'https://'
+url_country = str('ua') + '/search/vacancy?'
+url_city = name_city + '.hh.'
 url_area = 'area=' + str(5) + '&'
 url_period = 'search_period=' + str(3) + '&'
-url_text = 'text=' + str('python') + '&'
+url_vacancy = 'text=' + str('python') + '&'
 url_page = 'page=' + str(0)
-base_url = url_https + url_area + url_period + url_text + url_page
+base_url = url_https + url_city + url_country + url_area + url_period + url_vacancy + url_page
 
 
 def hh_parse(base_url, headers):
