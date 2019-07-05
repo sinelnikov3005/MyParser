@@ -5,8 +5,7 @@ headers = {'accept': '*/*',
            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'}
 
 # Страна, Город, Вакансия
-print('city')
-name_city = input()
+name_city = input('city\n')
 
 url_https = 'https://'
 url_country = str('ua') + '/search/vacancy?'
@@ -16,6 +15,7 @@ url_period = 'search_period=' + str(3) + '&'
 url_vacancy = 'text=' + str('python') + '&'
 url_page = 'page=' + str(0)
 base_url = url_https + url_city + url_country + url_area + url_period + url_vacancy + url_page
+print(' URL: ' + base_url + '\n\n')
 
 
 def hh_parse(base_url, headers):
@@ -47,6 +47,7 @@ def hh_parse(base_url, headers):
             print(title)
             print(company)
             print(href + '\n\n')
+
     else:
         print('ERROR')
 
