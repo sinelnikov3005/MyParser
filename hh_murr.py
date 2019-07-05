@@ -3,7 +3,13 @@ from bs4 import BeautifulSoup as bs
 
 headers = {'accept': '*/*',
            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'}
-base_url = 'https://kiev.hh.ua/search/vacancy?area=5&search_period=3&text=python&page=0'
+
+url_https = 'https://hh.ua/search/vacancy?'
+url_area = 'area=' + str(5) + '&'
+url_period = 'search_period=' + str(3) + '&'
+url_text = 'text=' + str('python') + '&'
+url_page = 'page=' + str(0)
+base_url = url_https + url_area + url_period + url_text + url_page
 
 
 def hh_parse(base_url, headers):
